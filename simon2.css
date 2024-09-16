@@ -1,0 +1,197 @@
+body {
+    text-align: center;
+    background-image: url("coolBackground1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+}
+
+.all{
+    height: 90vh;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.4);
+    color : white;
+    margin: 2rem;
+    border-radius: 30px;
+    
+    
+}
+
+#simon{
+    padding: 5px;
+    padding-bottom: 0px;
+    border-radius: 30px 30px 0px 0px;
+    margin : 0px;
+    border-bottom: 2px solid white;
+    box-shadow: 0px 3px 8px rgba(255, 255, 255,0.9);
+}
+
+#instruc{
+    font-size : 22px;
+    padding : 9px;
+    padding-bottom: 0px;
+
+    margin: 0px;
+}
+
+.lev{
+    color :green;
+    font-size: 30px;
+    font-weight: 900;
+    padding: 5px;
+    padding-top:0px;
+    margin:0px;
+
+}
+
+.clrs{
+   flex: 1;
+    background-color: white;
+    margin: 20px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.345);
+
+
+}
+
+
+
+#clrs{
+    height: 70%;
+    width: 90%;
+    background-color:rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px white;
+    margin: 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
+}
+
+#o1{
+    border-top-left-radius: 100%;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    background-color: rgb(0, 179, 255);
+}
+
+#o2{
+    border-top-right-radius: 100%;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    background-color: rgb(245, 85, 11);
+}
+
+#o3{
+    border-bottom-left-radius: 100%;
+    margin-top: 5px;
+    margin-right: 5px;
+    background-color: green;
+}
+
+#o4{
+    border-bottom-right-radius: 100%;
+    margin-top: 5px;
+    margin-left: 5px;
+    background-color: rgb(212, 216, 22);
+}
+
+.splash{
+    background-color: white !important;
+}
+
+.levelparaClass{
+    position: relative;
+    top: 2rem;
+    font-size: 30px;
+    color :white;
+    z-index: 1;
+}
+
+.btnStart{
+    color:rgba(255, 255, 255,0.7);
+    background-color: rgba(138, 43, 226,0.6);
+    outline: none;
+    border :none;
+    width : 40%;
+    height: 7%;
+    border-radius: 20%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    transition : 1s ease;
+}
+
+.btnStart:hover{
+    background-color: rgba(138, 43, 226, 1);
+    color:rgba(255, 255, 255,1);
+}
+
+.gameOver{
+    color:rgb(0, 0, 0);
+    position: fixed;
+    height:5%;
+    width:35%;
+    top:25%;
+    left:30%;
+    font-size: 40px;
+}
+
+.overDisplay{
+    display: none;
+}
+
+.gameEnd{
+    animation: gameOver 2s ease-out 0.4s 1 ;
+}
+
+.whiteClr{
+    color: rgb(255, 255, 255) !important;
+}
+
+.redClr{
+    background-color: red !important;
+}
+
+@keyframes gameOver {
+    from{
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    to{
+        background-color: rgba(255, 0, 0,0.8);
+    }
+}
+
+
+@media(max-width:700px){
+    .all{
+        width: 100%;
+        margin : 1rem;
+    }
+}
+
+
+@media(max-width:500px){
+    .all{
+        margin : 0.5rem;
+    }
+    #instruc{
+        display: none;
+    }
+    span{
+        margin-top :190px;
+    }
+    .btnStart{
+        margin-top:9px;
+    }
+    .gameOver{
+        font-size: 27px;
+    }
+}
+
+@media (min-width:500px) {
+    .btnStart{
+        display: none;
+    }
+}
